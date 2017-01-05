@@ -233,7 +233,7 @@ Alternatively, since we aren't overriding any other field properties, we could h
 Form field properties
 ------------------------
 
-The list of form field properties that you can set are as follows. Most of these have sensible defaults set automatically. Note that the string values of these constants are declared in the interface - you can assume that the string values of these constants will no change in future releases, and you can safely use these values in (for example) a plist used to configure the form.
+The list of form field properties that you can set are as follows. Most of these have sensible defaults set automatically. Note that the string values of these constants are declared in the interface - you can assume that the string values of these constants will not change in future releases, and you can safely use these values in (for example) a plist used to configure the form.
 
 ```objc
 static NSString *const FXFormFieldKey = @"key";
@@ -535,7 +535,7 @@ Swift Compatibility
 
 FXForms is fully compatible with Swift, with the following caveats:
 
-* Your forms objects must inherit from `NSObject`, or de declared using the `@objc` qualifier.
+* Your forms objects must inherit from `NSObject`, or be declared using the `@objc` qualifier.
 * For collection fields, you must use `NSArray`, `NSDictionary`, `NSOrderedSet`, etc. Swift's strongly typed collections won't work.
 * If your form objects are declared in a different module to your main app, FXForm's field value class inference may not work correctly, in which case you can explicitly specify the field class by adding the following method to your form object for each field that doesn't work:
 
